@@ -1,0 +1,17 @@
+<h1> <%= @def_word.word %> </h1>
+
+<form action="/" method="post">
+  <div class="container">
+    <div class="form-group">
+      <label for="definition">Enter A Definition:</label>
+      <input type="text" name="definition" id="definition" class="form-control">
+    </div>
+    <button type="submit" class="btn">Add Definition!</button>
+  </div>
+</form>
+
+<ul>
+  <% @defined.each do |define| %>
+  <li> <%= define.definition %> </li>
+  <% end %>
+</ul>

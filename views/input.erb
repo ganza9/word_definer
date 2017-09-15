@@ -1,0 +1,16 @@
+<form action="/" method="post">
+  <div class="container">
+    <h2>Word Definer</h2>
+      <div class="form-group">
+        <label for="word">Enter A Word:</label>
+        <input type="text" name="word" id="word" class="form-control">
+      </div>
+      <button type="submit" class="btn">Add Word!</button>
+  </div>
+</form>
+
+<ul>
+  <% @def_words.each do |def_word| %>
+  <li><a href="/output/ <%= def_word.id%>"> <%= def_word.word %></a></li>
+  <% end %>
+</ul>
