@@ -1,21 +1,22 @@
 class Definition
-  @@list = []
+  @@def_list = []
   attr_accessor(:definition, :id)
   def initialize(attributes)
-    @id = @@list.length + 1
+    @definition = attributes.fetch(:definition)
+    @id = @@def_list.length + 1
   end
 
   def self.all
-    @@list
+    @@def_list
   end
 
   def save
-    @@list.push(self)
+    @@def_list.push(self)
   end
 
   def self.find(id)
     define_id = id.to_i()
-    @@list.each do |define|
+    @@def_list.each do |define|
       if define.id == define_id
         return define
       end

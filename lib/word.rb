@@ -1,23 +1,23 @@
 class Word
-  @@list = []
+  @@word_list = []
   attr_accessor(:word, :id)
   def initialize(attributes)
     @word = attributes.fetch(:word)
-    @id = @@list.length + 1
+    @id = @@word_list.length + 1
   end
 
 
   def self.all
-    @@list
+    @@word_list
   end
 
   def save
-    @@list.push(self)
+    @@word_list.push(self)
   end
 
   def self.find(id)
     def_word_id = id.to_i()
-    @@list.each do |def_word|
+    @@word_list.each do |def_word|
       if def_word.id == def_word_id
         return def_word
       end

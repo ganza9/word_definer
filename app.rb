@@ -22,7 +22,7 @@ post ('/') do
   erb(:input)
 end
 
-post ('/') do
+post ('/output') do
   @definition = params.fetch('definition')
   attributes = {:definition=> @definition}
   @define = Definition.new(attributes)
@@ -31,9 +31,8 @@ post ('/') do
   erb(:output)
 end
 
-
 get ('/output/:id') do
-  @def_word = Word.find(params[:id])
-  @define = Definition.find(params[:id])
+  @def_words = Word.find(params[:id])
+  @defined = Definition.find(params[:id])
   erb(:output)
 end
