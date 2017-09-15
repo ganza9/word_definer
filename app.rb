@@ -15,7 +15,7 @@ end
 
 post ('/') do
   @word = params.fetch('word')
-  attributes = {:word=> @word}
+  attributes = @word
   @def_word = Word.new(attributes)
   @def_word.save()
   @def_words = Word.all
@@ -35,4 +35,10 @@ get ('/output/:id') do
   @def_words = Word.find(params[:id])
   @defined = Definition.find(params[:id])
   erb(:output)
+end
+
+get('/finish/:id')do
+  @def_words = Word.all
+  @defined = Definition.all
+  erb(:finish)
 end

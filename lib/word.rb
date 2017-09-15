@@ -1,11 +1,10 @@
 class Word
   @@word_list = []
   attr_accessor(:word, :id)
-  def initialize(attributes)
-    @word = attributes.fetch(:word)
+  def initialize(word)
+    @word = word
     @id = @@word_list.length + 1
   end
-
 
   def self.all
     @@word_list

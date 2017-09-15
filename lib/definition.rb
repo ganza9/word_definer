@@ -1,8 +1,8 @@
 class Definition
   @@def_list = []
   attr_accessor(:definition, :id)
-  def initialize(attributes)
-    @definition = attributes.fetch(:definition)
+  def initialize(definition)
+    @definition = definition
     @id = @@def_list.length + 1
   end
 
