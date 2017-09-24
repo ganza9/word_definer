@@ -1,45 +1,24 @@
-require ('sinatra')
-require('sinatra/base')
-require ('sinatra/reloader')
+require('sinatra')
+require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require ('./lib/word')
-require ('./lib/definition')
-require ('pry')
+require('./lib/word')
+require('pry')
 
-get ('/') do
-  @def_words = Word.all
-  @defined = Definition.all
+get('/') do
+  @list = Word.all()
   erb(:input)
 end
 
-post ('/') do
-  @word = params.fetch('word')
-  attributes = @word
-  @def_word = Word.new(attributes)
-  @def_word.save()
-  @def_words = Word.all
+post('/') do
+  vocabulary_word = params['vocabulary_word']
+  definition = params['definition']
+  new_vocab_word = Word.new(vocabulary_word, definition)
+  new_vocab_word.save()
+  @list = Word.all()
   erb(:input)
 end
 
-post ('/output') do
-  @word = params.fetch('word')
-  attributes = @word
-  @definition = params.fetch('definition')
-  attributes = {:definition=> @definition}
-  @define = Definition.new(attributes)
-  @define.save()
-  @defined = Definition.all
-  erb(:output)
-end
-
-get ('/output/:id') do
-  @def_words = Word.find(params[:id])
-  @defined = Definition.find(params[:id])
-  erb(:output)
-end
-
-post('/finish')do
-  @def_words = Word.all
-  @defined = Definition.all
+get('/words/:id') do
+  @word = Word.find(params[:id])
   erb(:finish)
 end

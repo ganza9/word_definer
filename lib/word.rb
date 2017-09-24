@@ -1,25 +1,30 @@
 class Word
-  @@word_list = []
-  attr_accessor(:word, :id)
-  def initialize(word)
-    @word = word
-    @id = @@word_list.length + 1
-  end
+ attr_accessor :vocabulary_word, :definition
+ attr_reader :id
+  @@list = []
+  @@definitions_list = []
 
-  def self.all
-    @@word_list
-  end
+ def initialize(vocabulary_word, definition)
+   @vocabulary_word = vocabulary_word
+   @definition = definition
+  @id = @@list.length + 1
+ end
 
-  def save
-    @@word_list.push(self)
-  end
-
-  def self.find(id)
-    def_word_id = id.to_i()
-    @@word_list.each do |def_word|
-      if def_word.id == def_word_id
-        return def_word
-      end
-    end
-  end
+ def self.all()
+   @@list
+ end
+ def save ()
+   @@list.push(self)
+ end
+ def self.clear()
+   @@list = []
+ end
+ def self.find(id)
+   word_id = id.to_i
+   @@list.each do |word|
+     if word.id == word_id
+       return word
+     end
+   end
+ end
 end
