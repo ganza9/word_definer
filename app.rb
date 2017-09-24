@@ -23,6 +23,8 @@ post ('/') do
 end
 
 post ('/output') do
+  @word = params.fetch('word')
+  attributes = @word
   @definition = params.fetch('definition')
   attributes = {:definition=> @definition}
   @define = Definition.new(attributes)

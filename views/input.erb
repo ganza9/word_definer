@@ -11,6 +11,6 @@
 
 <ul>
   <% @def_words.each do |def_word| %>
-  <li><a href="/output/ <%= def_word.id%>"> <%= def_word.word %></a></li>
+  <li><a href="/output/<%=def_word.id%>"> <%= def_word.word %></a></li>
   <% end %>
 </ul>
