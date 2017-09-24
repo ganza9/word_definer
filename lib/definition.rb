@@ -2,6 +2,7 @@ class Definition
   @@def_list = []
   attr_accessor(:definition, :id)
   def initialize(definition)
+    @word = word
     @definition = definition
     @id = @@def_list.length + 1
   end

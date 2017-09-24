@@ -1,4 +1,3 @@
-
 require ('sinatra')
 require('sinatra/base')
 require ('sinatra/reloader')
@@ -39,7 +38,7 @@ get ('/output/:id') do
   erb(:output)
 end
 
-get('/finish/:id')do
+post('/finish')do
   @def_words = Word.all
   @defined = Definition.all
   erb(:finish)
