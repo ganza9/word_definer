@@ -1,4 +1,4 @@
-# _{Word Definition}_
+# Word Definition
 
 #### Word Definer, 09/15/2017
 
@@ -15,7 +15,7 @@ Go to https://github.com/ganza9/word_definer and click on the clone or download 
 
 ## Known Bugs
 
-After submitting the definition there is an error.
+There are currently no known bugs.
 
 ## Support and contact details
 

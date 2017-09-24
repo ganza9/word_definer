@@ -12,7 +12,7 @@
     <button type="submit">Submit</button>
   </form>
 
-  <h2>Your List of Vocabulary Words:</h2>
+  <h2>Your Vocabulary Words:</h2>
 
   <% @list.each do |vocab_word| %>
     <a href='/words/<%=vocab_word.id%>'><%=vocab_word.vocabulary_word%></a>
