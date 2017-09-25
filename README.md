@@ -2,7 +2,7 @@
 
 #### Word Definer, 09/15/2017
 
-#### By _**{Gennaro Anzalone}**_
+#### By Gennaro Anzalone
 
 ## Description
 
@@ -23,7 +23,7 @@ If there are any issues, comments, or concerns please contact me directly at g.a
 
 ## Technologies Used
 
-This program was built with Ruby and Sinatra.
+This program was built with Ruby and Sinatra. This program is also deployed to Heroku which can be found here https://desolate-meadow-40485.herokuapp.com/
 
 ### License
 
