@@ -26,8 +26,6 @@ GEM
     rack (1.6.8)
     rack-protection (1.5.3)
       rack
-    rack-test (0.7.0)
-      rack (>= 1.0, < 3)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -41,16 +39,17 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
-    sinatra (1.4.8)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    sinatra-contrib (1.4.7)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.0)
       backports (>= 2.0)
       multi_json
-      rack-protection
-      rack-test
-      sinatra (~> 1.4.0)
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.0)
+      sinatra (= 2.0.0)
       tilt (>= 1.3, < 3)
     tilt (2.0.8)
     xpath (2.1.0)
@@ -60,7 +59,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   capybara
+=======
+>>>>>>> dde91e7a487a007f0aaf06c1158eb717efa229f0
   pry
   rspec
   sinatra
