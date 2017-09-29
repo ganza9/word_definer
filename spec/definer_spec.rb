@@ -1,4 +1,6 @@
+require('sinatra')
 require 'word'
+
 
 describe('Item') do
   before() do
