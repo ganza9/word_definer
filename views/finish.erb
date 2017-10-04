@@ -1,6 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="/" class="breadcrumb">Home</a>
+      <a href="#!" class="breadcrumb"><%= @word.vocabulary_word %></a>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
-  <h1><%= @word.vocabulary_word %>:</h1>
-  <h2><%= @word.definition%></h2>
+  <h1 id="word"><%= @word.vocabulary_word %>:</h1>
+  <h2 id="definition"><%= @word.definition%></h2>
   <br>
   <a href="/">Return to home</a>
 </div>
