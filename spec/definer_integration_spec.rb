@@ -1,5 +1,5 @@
-require('sinatra')
 require('capybara/rspec')
+require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, true)
 
@@ -16,7 +16,8 @@ end
 
 describe('viewing definition', {:type => :feature})do
   it('shows the word and definition')do
-    click_link('/word/:id')
+  visit('/')
+    click_link('Rugby')
     expect(page).to have_content('Rugby: A game for hooligans played by gentlemen')
   end
 end
